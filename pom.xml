@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.jojoreading.demo</groupId>
+	<artifactId>server</artifactId>
+	<version>0.0.1</version>
+
+	<packaging>pom</packaging>
+
+	<name>demo-server</name>
+	<url>https://github.com/jojoreading-public/demo-server</url>
+
+	<modules>
+		<module>server-test</module>
+		<module>server-common</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<apollo.version>1.5.0</apollo.version>
+		<apollo-test-sdk.version>0.0.1-SNAPSHOT</apollo-test-sdk.version>
+		<spring.version>5.0.8.RELEASE</spring.version>
+		<spring.boot.version>2.0.4.RELEASE</spring.boot.version>
+		<mybatis.plus.version>3.1.2</mybatis.plus.version>
+		<redisson.version>3.11.1</redisson.version>
+		<lombok.version>1.18.10</lombok.version>
+		<junit.version>4.12</junit.version>
+		<jupiter.version>5.5.2</jupiter.version>
+		<mockito.version>1.10.19</mockito.version>
+		<spring.boot.druid.starter.version>1.1.9</spring.boot.druid.starter.version>
+		<mysql.version>8.0.13</mysql.version>
+		<apollo.version>1.5.0</apollo.version>
+		<commons-lang.version>3.7</commons-lang.version>
+		<snakeyml.version>1.23</snakeyml.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- second party service -->
+			<dependency>
+				<groupId>cn.tinman.sharedservices</groupId>
+				<artifactId>apollo-test-sdk</artifactId>
+				<version>${apollo-test-sdk.version}</version>
+			</dependency>
+			<!-- second party service -->
+
+			<!-- framework -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
+				<version>${spring.boot.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>snakeyaml</artifactId>
+						<groupId>org.yaml</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${spring.boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-mail</artifactId>
+				<version>${spring.boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid-spring-boot-starter</artifactId>
+				<version>${spring.boot.druid.starter.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis.plus.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.redisson</groupId>
+				<artifactId>redisson</artifactId>
+				<version>${redisson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ctrip.framework.apollo</groupId>
+				<artifactId>apollo-client</artifactId>
+				<version>${apollo.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>snakeyaml</artifactId>
+						<groupId>org.yaml</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<!-- framework -->
+
+			<!-- effective utils -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+			<!-- effective utils -->
+
+			<!-- test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<version>${jupiter.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${spring.boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>${mockito.version}</version>
+			</dependency>
+			<!-- test -->
+		</dependencies>
+	</dependencyManagement>
+
+</project>

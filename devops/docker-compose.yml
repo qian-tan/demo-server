@@ -1,0 +1,42 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: demo-server-mysql
+    image: mysql:5.6.45
+    command: --default-authentication-plugin=mysql_native_password --default-time-zone=+08:00
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+    volumes:
+      - ./mysql/init-sql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+  redis:
+    container_name: demo-server-redis
+    image: redis:4.0-alpine
+    volumes:
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    command:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
+    ports:
+      - "6379:6379"
+  apollo:
+    container_name: demo-server-apollo
+    image: jojoreading/apollo-quick-start:1.5.0
+    depends_on:
+      - apollo-db
+    ports:
+      - "18080:8080"
+      - "18081:8070"
+  apollo-db:
+    container_name: demo-server-apollodb
+    image: mysql:5.7
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+      - "13306:3306"
+    volumes:
+      - ./apollo/init-sql:/docker-entrypoint-initdb.d
