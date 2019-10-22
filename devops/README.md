@@ -1,3 +1,4 @@
+# DevOps
 ## 脚本含义
 * start.sh   启动各项服务
 * stop.sh    停止各项服务
@@ -13,4 +14,4 @@
 
 * Redis  
 服务器版本: 4.0  
-认证信息: port 6379  password: test  
+认证信息: port 6379  password: test  []()
