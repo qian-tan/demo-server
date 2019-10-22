@@ -3,6 +3,7 @@
 
 ## 准备事项
 * 安装最新版本的 Docker
+* 通过 maven 编译并在本地安装这个依赖项目 [apollo-test-sdk](https://github.com/jojoreading-public/apollo-test-sdk)
 
 ## 目录结构
 * devops  
