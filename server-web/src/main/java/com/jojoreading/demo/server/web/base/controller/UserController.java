@@ -1,7 +1,7 @@
 package com.jojoreading.demo.server.web.base.controller;
 
 import com.jojoreading.demo.server.biz.domain.CreateUserDTO;
-import com.jojoreading.demo.server.biz.service.IUserService;
+import com.jojoreading.demo.server.biz.service.IUserBizService;
 import com.jojoreading.demo.server.common.api.ResultDTO;
 import com.jojoreading.demo.server.web.base.model.req.CreateUserParam;
 import com.jojoreading.demo.server.web.common.ApiResult;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController extends AbstractController {
 
 	@Autowired
-	private IUserService userService;
+	private IUserBizService userService;
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public ApiResult createUser(@Validated CreateUserParam createUserParam) {

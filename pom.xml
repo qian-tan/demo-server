@@ -18,6 +18,7 @@
 		<module>server-common</module>
 		<module>server-web</module>
 		<module>server-biz</module>
+		<module>server-core</module>
 	</modules>
 
 	<properties>

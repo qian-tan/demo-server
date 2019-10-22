@@ -124,7 +124,7 @@ public abstract class UnitTestBase {
                 .setPassword(dockerProps.getProperty("redis_password"));
 
         RedissonClient redissonClient = Redisson.create(config);
-        redissonClient.getKeys().flushall();
+		redissonClient.getKeys().flushall();
     }
 
     @Before

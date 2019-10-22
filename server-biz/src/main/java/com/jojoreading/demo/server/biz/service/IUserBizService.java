@@ -9,7 +9,7 @@ import com.jojoreading.demo.server.common.api.ResultDTO;
  * @author huangjing@tinman.cn
  * @date 2019/10/22
  **/
-public interface IUserService {
+public interface IUserBizService {
 
 	/**
 	 * 创建用户

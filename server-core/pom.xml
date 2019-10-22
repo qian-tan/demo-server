@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-	<artifactId>server-biz</artifactId>
+	<artifactId>server-core</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,7 +21,7 @@
 		<!-- module -->
 		<dependency>
 			<groupId>com.jojoreading.demo</groupId>
-			<artifactId>server-core</artifactId>
+			<artifactId>server-common</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		<!-- module -->
