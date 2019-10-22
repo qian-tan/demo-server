@@ -16,6 +16,8 @@
 	<modules>
 		<module>server-test</module>
 		<module>server-common</module>
+		<module>server-web</module>
+		<module>server-biz</module>
 	</modules>
 
 	<properties>
@@ -36,7 +38,10 @@
 		<mysql.version>8.0.13</mysql.version>
 		<apollo.version>1.5.0</apollo.version>
 		<commons-lang.version>3.7</commons-lang.version>
+		<commons-codec.version>1.11</commons-codec.version>
 		<snakeyml.version>1.23</snakeyml.version>
+		<hibernate-validator.version>6.0.17.Final</hibernate-validator.version>
+		<fastjson.version>1.2.58</fastjson.version>
 	</properties>
 
 	<dependencyManagement>
@@ -115,6 +120,12 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${hibernate-validator.version}</version>
+			</dependency>
 			<!-- framework -->
 
 			<!-- effective utils -->
@@ -129,6 +140,18 @@
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>${commons-codec.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
 			</dependency>
 			<!-- effective utils -->
 

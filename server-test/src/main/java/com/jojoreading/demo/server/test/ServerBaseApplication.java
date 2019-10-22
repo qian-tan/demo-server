@@ -9,6 +9,4 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages = {"com.jojoreading.demo.server"})
 public class ServerBaseApplication {
 
-
-
 }

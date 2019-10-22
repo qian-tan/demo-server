@@ -7,10 +7,12 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ResultCode {
 
-	SYSTEM_ERROR("0000", "系统错误"),
+	SUCCESS(0, "成功"),
+	SYSTEM_ERROR(1, "系统错误"),
+	INVALID_PARAMS(2, "参数错误"),
     ;
 
-    private String code;
+	private Integer code;
 
     private String message;
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+		<groupId>com.jojoreading.demo</groupId>
+		<artifactId>server</artifactId>
+		<version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+	<artifactId>server-biz</artifactId>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+		<!-- module -->
+		<dependency>
+			<groupId>com.jojoreading.demo</groupId>
+			<artifactId>server-common</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<!-- module -->
+
+		<!-- effective utils -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<!-- effective utils -->
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <!-- 这里的 test-suit 不是对应某个具体的环境，而是泛指单元测试,组件测试,集成测试 -->
+            <id>test-suit</id>
+            <dependencies>
+                <!-- module -->
+				<dependency>
+					<groupId>com.jojoreading.demo</groupId>
+					<artifactId>server-test</artifactId>
+					<version>${project.parent.version}</version>
+				</dependency>
+                <!-- module -->
+			</dependencies>
+        </profile>
+    </profiles>
+
+</project>

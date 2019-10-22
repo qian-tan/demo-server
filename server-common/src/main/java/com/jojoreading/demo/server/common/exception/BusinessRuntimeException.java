@@ -8,23 +8,19 @@ public class BusinessRuntimeException extends RuntimeException {
     /**
      * 错误码
      */
-    private String errorCode;
+	private Integer errorCode;
     /**
      * 错误描述
      */
     private String errorMsg;
 
-    /**
-     * @param errorCode
-     * @param errorMsg
-     */
-    public BusinessRuntimeException(String errorCode, String errorMsg) {
+	public BusinessRuntimeException(Integer errorCode, String errorMsg) {
         super(String.format("BusinessException{errorCode:%s, errorMsg:%s}", errorCode, errorMsg));
         this.errorCode = errorCode;
         this.errorMsg = errorMsg;
     }
 
-    public BusinessRuntimeException(String errorCode, String errorMsg, Throwable cause) {
+	public BusinessRuntimeException(Integer errorCode, String errorMsg, Throwable cause) {
         super(String.format("BusinessException{errorCode:%s, errorMsg:%s}", errorCode, errorMsg), cause);
         this.errorCode = errorCode;
         this.errorMsg = errorMsg;
@@ -38,7 +34,7 @@ public class BusinessRuntimeException extends RuntimeException {
         super(String.format("BusinessException{errorCode:%s, errorMsg:%s}", resultCode.getCode(), resultCode.getMessage()), cause);
     }
 
-    public String getErrorCode() {
+	public Integer getErrorCode() {
         return errorCode;
     }
 
