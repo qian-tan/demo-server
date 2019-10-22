@@ -1,6 +1,9 @@
 # demo-server
 演示程序，演示项目结构、单元测试、集成测试等
 
+## 准备事项
+* 安装最新版本的 Docker
+
 ## 目录结构
 * devops  
 里面存放了项目相关的一些外部依赖，目前包括 MySQL, Redis, Apollo 等  
