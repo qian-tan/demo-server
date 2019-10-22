@@ -1,6 +1,6 @@
 package com.jojoreading.demo.server.test;
 
-import cn.tinman.sharedservices.apollotestsdk.ApolloTestClient;
+import com.jojoreading.sharedservices.apollotestsdk.ApolloTestClient;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;

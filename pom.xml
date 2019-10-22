@@ -26,7 +26,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<apollo.version>1.5.0</apollo.version>
-		<apollo-test-sdk.version>0.0.1-SNAPSHOT</apollo-test-sdk.version>
+		<apollo-test-sdk.version>0.0.1</apollo-test-sdk.version>
 		<spring.version>5.0.8.RELEASE</spring.version>
 		<spring.boot.version>2.0.4.RELEASE</spring.boot.version>
 		<mybatis.plus.version>3.1.2</mybatis.plus.version>
