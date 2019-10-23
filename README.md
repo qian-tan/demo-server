@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/jojoreading-public/demo-server.svg?branch=master)](https://travis-ci.com/jojoreading-public/demo-server)
+[![Coverage Status](https://coveralls.io/repos/github/jojoreading-public/demo-server/badge.svg?branch=master)](https://coveralls.io/github/jojoreading-public/demo-server?branch=master)
 # demo-server
 本项目是一个演示程序，以 SprintBoot 作为框架基础，结合了 Apollo 作为配置中心、Docker 作为外部服务容器，演示项目模块结构、如何进行单元测试、如何进行集成测试等
 

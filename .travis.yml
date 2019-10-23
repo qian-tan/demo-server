@@ -32,6 +32,9 @@ before_script:
 script:
   - mvn clean test -P test-suit
 
+after_success:
+  - mvn cobertura:cobertura coveralls:report -P test-suit
+
 after_script:
   - ./devops/stop.sh
 
