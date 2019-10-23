@@ -22,6 +22,10 @@
 各个模块公用的测试组件，具体细节请阅读该目录下的 [README.md](./server-test/README.md)
 
 ## 快捷命令
+* 启动容器内的所有资源
+```
+cd devops && ./start.sh
+```
 * 运行模块下的所有测试，包括单元测试和集成测试  
 ```
 mvn clean test -P test-suit
