@@ -34,3 +34,5 @@ mvn clean test -P test-suit
 ```
 mvn clean install -pl server-web -am -Dmaven.test.skip=true
 ```
+ ## 我们的团队博客
+ [jojoreading public blog](https://jojoreading-public.github.io)
