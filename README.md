@@ -20,3 +20,13 @@
 
 * server-test  
 各个模块公用的测试组件，具体细节请阅读该目录下的 [README.md](./server-test/README.md)
+
+## 快捷命令
+* 运行模块下的所有测试，包括单元测试和集成测试  
+```
+mvn clean test -P test-suit
+```
+* 打包 server-test 模块
+```
+mvn clean install -pl server-web -am -Dmaven.test.skip=true
+```
