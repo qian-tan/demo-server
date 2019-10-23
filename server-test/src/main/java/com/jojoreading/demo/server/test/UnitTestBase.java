@@ -1,6 +1,5 @@
 package com.jojoreading.demo.server.test;
 
-import com.jojoreading.sharedservices.apollotestsdk.ApolloTestClient;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;
@@ -60,7 +59,7 @@ public abstract class UnitTestBase {
         List<String> namespaceList = new ArrayList<>();
         ApolloTestClient client = new ApolloTestClient(dockerPropsFile);
         for (File configFile: fileList) {
-            namespaceList.add(client.createNamespaceAndInitProps(configFile));
+			namespaceList.add(client.createNamespaceAndInitProps(configFile));
         }
 
         // 配置系统属性
