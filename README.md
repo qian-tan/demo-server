@@ -6,7 +6,7 @@
 
 ## 目录结构
 * devops  
-里面存放了项目相关的一些外部依赖，目前包括 MySQL, Redis, Apollo 等  
+该目录存放了项目相关的一些外部依赖，目前包括 MySQL, Redis, Apollo 等  
 启动项目或者运行测试之前先启动 devops 环境，请阅读该目录下的 [README.md](./devops/README.md)
 
 * server-biz  
