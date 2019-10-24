@@ -33,7 +33,7 @@ cd devops && ./start.sh
 ```
 mvn clean test -P test-suit
 ```
-* 打包 server-test 模块
+* 打包 server-web 模块
 ```
 mvn clean install -pl server-web -am -Dmaven.test.skip=true
 ```
