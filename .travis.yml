@@ -17,6 +17,7 @@ services:
 
 env:
   - DOCKER_COMPOSE_VERSION=1.24.1
+  - CODECOV_TOKEN=a14eabb4-5dd4-4748-ae98-88f2bd45d7b0
 
 before_install:
   - sudo rm /usr/local/bin/docker-compose
@@ -37,10 +38,10 @@ before_script:
   - curl -verbose http://localhost:18081
 
 script:
-  - mvn clean test -P test-suit
+  - mvn clean test cobertura:cobertura coveralls:report -P test-suit
 
 after_success:
-  - mvn cobertura:cobertura coveralls:report -P test-suit
+  - bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}
 
 after_script:
   - ./devops/stop.sh
