@@ -10,11 +10,15 @@
             <!-- 控制台也要使用UTF-8，不要使用GBK，否则会中文乱码 -->
             <charset>UTF-8</charset>
         </encoder>
+
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>INFO</level>
+		</filter>
     </appender>
 
-    <appender name="DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>logs/debug.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<FileNamePattern>logs/server-common.%d{yyyy-MM-dd}.log</FileNamePattern>
             <MaxHistory>1</MaxHistory>
         </rollingPolicy>
 
@@ -24,16 +28,16 @@
         </encoder>
 
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>DEBUG</level>
+			<level>INFO</level>
         </filter>
 
         <prudent>false</prudent>
     </appender>
 
     <!-- 控制台输出日志级别 -->
-    <root level="DEBUG">
+	<root level="DEBUG">
         <appender-ref ref="STDOUT"/>
-        <appender-ref ref="DEBUG" />
+		<appender-ref ref="FILE" />
     </root>
 
 </configuration>
