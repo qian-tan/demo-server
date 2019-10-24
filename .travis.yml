@@ -34,7 +34,8 @@ jdk:
   - openjdk8
 
 before_script:
-  - sleep 180
+  - free -m
+  - sleep 120
   - docker ps -a
   - curl -verbose http://localhost:18080
   - curl -verbose http://localhost:18081
