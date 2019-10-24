@@ -16,8 +16,10 @@ services:
   - docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=1.24.1
-  - CODECOV_TOKEN=a14eabb4-5dd4-4748-ae98-88f2bd45d7b0
+  global:
+    - DOCKER_COMPOSE_VERSION=1.24.1
+  jobs:
+    - MAVEN_PROFILE=test-suit
 
 before_install:
   - sudo rm /usr/local/bin/docker-compose
@@ -38,10 +40,10 @@ before_script:
   - curl -verbose http://localhost:18081
 
 script:
-  - mvn clean test cobertura:cobertura coveralls:report -P test-suit
+  - mvn clean test cobertura:cobertura coveralls:report -P ${MAVEN_PROFILE}
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}
+  - bash <(curl -s https://codecov.io/bash)
 
 after_script:
   - ./devops/stop.sh
