@@ -18,7 +18,6 @@ services:
 env:
   global:
     - DOCKER_COMPOSE_VERSION=1.24.1
-  jobs:
     - MAVEN_PROFILE=test-suit
 
 before_install:
