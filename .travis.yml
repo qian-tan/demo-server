@@ -1,6 +1,13 @@
 language: java
 sudo: required
 
+notification:
+  email:
+    recipients:
+      - huangjing@tinman.cn
+    on_success: always
+    on_failure: always
+
 branches:
   only:
     - master
