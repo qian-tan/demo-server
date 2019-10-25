@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jojoreading-public/demo-server.svg?branch=master)](https://travis-ci.com/jojoreading-public/demo-server)
+[![Build Status](https://travis-ci.com/jojoreading-public/demo-server.svg?branch=master)](https://travis-ci.com/jojoreading-public/demo-server)
 [![Coverage Status](https://coveralls.io/repos/github/jojoreading-public/demo-server/badge.svg?branch=master)](https://coveralls.io/github/jojoreading-public/demo-server?branch=master)
 [![codecov](https://codecov.io/gh/jojoreading-public/demo-server/branch/master/graph/badge.svg)](https://codecov.io/gh/jojoreading-public/demo-server)
 # demo-server
