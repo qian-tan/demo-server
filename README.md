@@ -4,6 +4,9 @@
 # demo-server
 本项目是一个演示程序，以 SprintBoot 作为框架基础，结合了 Apollo 作为配置中心、Docker 作为外部服务容器，演示项目模块结构、如何进行单元测试、如何进行集成测试等
 
+实现这个项目的过程中，也参考了以下的一些资料：
+* [后端开发实践系列——开发者的第0个迭代](https://mp.weixin.qq.com/s/uMB0nYc_c_lA0CHSqy3q4w)
+
 ## 准备事项
 * 安装最新版本的 Docker
 
