@@ -38,7 +38,6 @@ before_script:
   - docker ps -a
   - curl -verbose http://localhost:18080
   - curl -verbose http://localhost:18081
-  - curl -verbose https://twitter.com/
 
 script:
   - mvn clean test cobertura:cobertura coveralls:report -P ${MAVEN_PROFILE}
